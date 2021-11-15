@@ -214,7 +214,6 @@ exec slack
 bindsym $mod+c exec code
 bindsym $mod+n exec nautilus
 bindsym $mod+s exec gnome-control-center
-bindsym $mod+shift+s exec shutter -s
 
 # colors
 set $bg-color 	         #000000
@@ -235,8 +234,9 @@ exec_always xrandr --dpi 120
 # wallpaper
 exec_always feh --bg-fill /home/vinz/Downloads/scene.jpg
 
-bindsym XF86MonBrightnessUp exec light -A 5 # increase screen brightness
-bindsym XF86MonBrightnessDown exec light -U 5r # decrease screen brightness
+# brightness settings
+bindsym XF86MonBrightnessUp exec light -A 1 # increase screen brightness
+bindsym XF86MonBrightnessDown exec light -U 1 # decrease screen brightness
 
 # scroll wheel
 bindsym --whole-window $mod+button4 workspace next_on_output
@@ -250,3 +250,8 @@ bindsym XF86AudioLowerVolume exec amixer -D pulse sset Master 5%-
 bindsym XF86AudioMute exec amixer -D pulse sset Master 0%
 bindsym XF86AudioPlay exec playerctl play-pause
 bindsym XF86AudioPause exec playerctl play-pause
+
+# print screen
+
+bindsym Print exec flameshot gui
+bindsym $mod+Shift+s exec flameshot gui
