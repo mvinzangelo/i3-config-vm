@@ -232,7 +232,7 @@ client.urgent           $urgent-bg-color    $urgent-bg-color   $text-color      
 # screen
 exec_always xrandr --dpi 120
 # wallpaper
-exec_always feh --bg-fill /home/vinz/Downloads/scene.jpg
+exec_always feh --bg-fill /home/vinz/.config/i3/scene.jpg
 
 # brightness settings
 bindsym XF86MonBrightnessUp exec light -A 1 # increase screen brightness
